@@ -28,7 +28,8 @@ def send_code(code, BUFFER_SIZE):
     try:
         s.connect((TCP_IP, TCP_PORT))
     except timeout:
-        exit(1)
+        if args.homeassistant:
+            exit(1)
     #print(decode_hex(code)[0])
     s.send(decode_hex(code)[0])
 
