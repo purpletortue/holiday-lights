@@ -6,6 +6,7 @@
 """
 import argparse
 import socket
+from socket import AF_INET, SOCK_STREAM, timeout
 import sys
 import time
 import ipaddress
@@ -23,7 +24,11 @@ def send_code(code, BUFFER_SIZE):
     TCP_IP = args.device
     TCP_PORT = 5577
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    s.connect((TCP_IP, TCP_PORT))
+    s.settimeout(5.0)
+    try:
+        s.connect((TCP_IP, TCP_PORT))
+    except timeout:
+        exit(1)
     #print(decode_hex(code)[0])
     s.send(decode_hex(code)[0])
 
