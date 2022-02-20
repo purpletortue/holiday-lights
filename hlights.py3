@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# version 2.1.0
+# version 2.2.0
 # IOT holiday light interface for Philips Illuminate
 """
 
