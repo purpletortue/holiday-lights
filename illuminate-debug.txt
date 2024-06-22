@@ -1,0 +1,21 @@
+Christmas on
+(function 30)
+8805 ff00 0036 c800 ff00 00ff 6e00 36c8 0055
+
+warm white
+5600 0000 ffaa
+56 R G B W aa
+
+cool white
+56ff ffff 00aa
+56 R G B W aa
+
+W= soft white
+values are brightness
+
+
+8805 0000 0000 0000 0000 0000 0000 0000 0055
+Brightness = 0
+
+8805 ff00 0045 c800 ff00 00ff 5600 45c8 0055
+
